@@ -608,6 +608,7 @@ function inputTaskParams()
 
 function prepareTags($tagsStr)
 {
+	$tagsStr = str_replace(array('，',' '),'',trim($tagsStr)); //Other character separations are supported
 	$tags = explode(',', $tagsStr);
 	if(!$tags) return 0;
 
